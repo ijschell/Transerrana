@@ -8,36 +8,88 @@ Version: 1.0
 */
 @font-face {
     font-family: 'Axiforma-book';
-    src: url('Axiforma-Book.woff2') format('woff2'),
-        url('Axiforma-Book.woff') format('woff');
+    src: url('assets/fonts/Axiforma-Book.woff2') format('woff2'),
+        url('assets/fonts/Axiforma-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Axiforma-regular';
-    src: url('Axiforma-Regular.woff2') format('woff2'),
-        url('Axiforma-Regular.woff') format('woff');
+    src: url('assets/fonts/Axiforma-Regular.woff2') format('woff2'),
+        url('assets/fonts/Axiforma-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Axiforma-light';
-    src: url('Axiforma-Light.woff2') format('woff2'),
-        url('Axiforma-Light.woff') format('woff');
+    src: url('assets/fonts/Axiforma-Light.woff2') format('woff2'),
+        url('assets/fonts/Axiforma-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Axiforma-black';
-    src: url('Axiforma-Black.woff2') format('woff2'),
-        url('Axiforma-Black.woff') format('woff');
+    src: url('assets/fonts/Axiforma-Black.woff2') format('woff2'),
+        url('assets/fonts/Axiforma-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
-
+.container-fluid{
+    max-width: 1000px;
+}
 body{
     font-family: 'Axiforma-regular';
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    header{
+        background: rgba(0,0,0,0.5);
+        height: 70px;
+        padding: 7px 0px;
+        .container-fluid{
+            > div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                > div{
+                    display: flex;
+                    align-items: center;
+                    h1{
+                        display: block;
+                        background-image: url('./assets/images/logo_blanco.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 53px;
+                        width: 269px;
+                        margin: 0;
+                        span{
+                            opacity: 0;
+                        }
+                    }
+                    #menu{
+                        display: flex;
+                        li{
+                            list-style: none;
+                            margin: 0 0 0 25px;
+                            a{
+                                display: block;
+                                text-decoration: none;
+                                color: #fff;
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                    .search{
+                        color: #fff;
+                        margin-left: 25px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }

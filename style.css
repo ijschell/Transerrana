@@ -8,33 +8,106 @@ Version: 1.0
 */
 @font-face {
   font-family: 'Axiforma-book';
-  src: url("Axiforma-Book.woff2") format("woff2"), url("Axiforma-Book.woff") format("woff");
+  src: url("assets/fonts/Axiforma-Book.woff2") format("woff2"), url("assets/fonts/Axiforma-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Axiforma-regular';
-  src: url("Axiforma-Regular.woff2") format("woff2"), url("Axiforma-Regular.woff") format("woff");
+  src: url("assets/fonts/Axiforma-Regular.woff2") format("woff2"), url("assets/fonts/Axiforma-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Axiforma-light';
-  src: url("Axiforma-Light.woff2") format("woff2"), url("Axiforma-Light.woff") format("woff");
+  src: url("assets/fonts/Axiforma-Light.woff2") format("woff2"), url("assets/fonts/Axiforma-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Axiforma-black';
-  src: url("Axiforma-Black.woff2") format("woff2"), url("Axiforma-Black.woff") format("woff");
+  src: url("assets/fonts/Axiforma-Black.woff2") format("woff2"), url("assets/fonts/Axiforma-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
+.container-fluid {
+  max-width: 1000px;
+}
+
 body {
   font-family: 'Axiforma-regular';
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body header {
+  background: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  padding: 7px 0px;
+}
+
+body header .container-fluid > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container-fluid > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container-fluid > div > div h1 {
+  display: block;
+  background-image: url("./assets/images/logo_blanco.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 53px;
+  width: 269px;
+  margin: 0;
+}
+
+body header .container-fluid > div > div h1 span {
+  opacity: 0;
+}
+
+body header .container-fluid > div > div #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .container-fluid > div > div #menu li {
+  list-style: none;
+  margin: 0 0 0 25px;
+}
+
+body header .container-fluid > div > div #menu li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+body header .container-fluid > div > div .search {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

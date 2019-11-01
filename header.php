@@ -11,7 +11,32 @@
     ?>
 </head>
 <body data-ajax="<?php echo site_url() ?>">
-    <header>
-        
+    <header>        
+        <div class="container-fluid">
+            <div>
+                <div>
+                    <h1><span>Transerrana</span></h1>
+                </div>
+                <div>
+                    <ul id="menu">
+                        <li>
+                            <a href="#">Sobre nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#">Paseos</a>
+                        </li>
+                        <li>
+                            <a href="#">Galería</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacto</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="search">
+                        <span class="dashicons dashicons-search"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
