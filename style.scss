@@ -1,0 +1,43 @@
+/*
+Theme Name: {Nombre}
+Theme URI: http://thecodingbear.com/
+Author: Jonathan Schell
+Author URI: http://thecodingbear.com/
+Description: Este es un template creado por Jonathan Schell.
+Version: 1.0
+*/
+@font-face {
+    font-family: 'Axiforma-book';
+    src: url('Axiforma-Book.woff2') format('woff2'),
+        url('Axiforma-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma-regular';
+    src: url('Axiforma-Regular.woff2') format('woff2'),
+        url('Axiforma-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma-light';
+    src: url('Axiforma-Light.woff2') format('woff2'),
+        url('Axiforma-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axiforma-black';
+    src: url('Axiforma-Black.woff2') format('woff2'),
+        url('Axiforma-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Axiforma-regular';
+}
