@@ -10,7 +10,7 @@
     wp_head();
     ?>
 </head>
-<body data-ajax="<?php echo site_url() ?>">
+<body data-ajax="<?php echo site_url() ?>" <?php echo body_class() ?>>
     <header>        
         <div class="container-fluid">
             <div>

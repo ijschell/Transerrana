@@ -37,18 +37,47 @@ Version: 1.0
     font-weight: 900;
     font-style: normal;
 }
+
+$font-regular: 'Axiforma-regular';
+$font-light: 'Axiforma-light';
+$font-book: 'Axiforma-book';
+$font-black: 'Axiforma-black';
+$innerPadding: 40px 0;
+$bgGrey: #F6F6F6;
+
 .container-fluid{
     max-width: 1000px;
 }
+.bgGrey{
+    background: $bgGrey;
+}
+h2{
+    margin: 0 0 15px 0;
+    color: #979797;
+    font-family: $font-light;
+    font-size: 30px;
+    text-transform: uppercase;
+}
 body{
-    font-family: 'Axiforma-regular';
+    font-family: $font-regular;
     margin: 0;
     padding: 0;
     font-size: 16px;
+    p{
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    // heade
     header{
         background: rgba(0,0,0,0.5);
         height: 70px;
         padding: 7px 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 11;
         .container-fluid{
             > div{
                 display: flex;
@@ -85,11 +114,302 @@ body{
                     }
                     .search{
                         color: #fff;
-                        margin-left: 25px;
+                        margin-left: 35px;
                         text-decoration: none;
                     }
                 }
             }
+        }
+    }
+    // slider
+    #slider{
+        .item{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            h3{
+                margin: auto;
+                color: #fff;
+                font-size: 50px;
+                font-family: $font-light;
+                max-width: 70%;
+                text-align: center;
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: block;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            text-decoration: none;
+            span{
+                font-size: 50px;
+            }
+            &.slick-prev{
+                left: 30px;
+            }
+            &.slick-next{
+                right: 30px;
+            }
+        }
+    }
+    // sobre nosotros
+    #sobreNosotros{
+        text-align: center;
+        > .container-fluid{
+            padding: $innerPadding;
+        }
+        h2{
+            text-align: center;
+        }
+        .bgGrey{
+            padding: $innerPadding;
+            .container-fluid{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    padding: 0 20px;
+                    h4{
+                        color: #C6B198;
+                    }
+                    > div{
+                        height: 50px;
+                        img{
+                            height: 40px;
+                        }
+                    }
+                    &:first-child{
+                        img{
+                            height: auto;
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // gallery
+    #gallery{
+        padding: $innerPadding;
+        .sliderGallery{
+            .item{
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                margin: 0 5px;
+                &:after{
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+                a{
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    // paseos especiales
+    #paseosEspeciales{
+        padding: $innerPadding;
+        text-align: center;
+        .paseosPrecios{
+            margin-top: 40px;
+            .item{
+                margin: 0 20px;
+                background: #fff;
+                transition: opacity 1s ease;
+                opacity: 0.1;
+                .image{
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 350px;
+                    position: relative;
+                    .price{
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        background: #C6B198;
+                        padding: 5px 15px;
+                        p{
+                            color: #fff;
+                            margin: 0;
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .body{
+                    padding: 0 15px 15px 15px;
+                    .title{
+                        border-bottom: solid 1px #ccc;
+                        padding: 20px 0;
+                        h4{
+                            color: #979797;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-family: $font-light;
+                            margin: 0;
+                        }
+                    }
+                    .header{
+                        padding: 20px 0;
+                        display: flex;
+                        border-bottom: solid 1px #ccc;
+                        .column{
+                            width: calc(100% / 3);
+                            padding: 0 10px;
+                            .title{
+                                color: #C6B198;
+                                border-bottom: none;
+                                margin: 0;
+                                padding-top: 0;
+                            }
+                            p{
+                                color: #979797;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .description{
+                        padding: 20px 0 0 0;
+                        height: 110px;
+                        overflow: hidden;
+                        h5{
+                            margin: 0;
+                            color: #979797;
+                            font-size: 16px;
+                        }
+                        p{
+                            color: #979797;
+                            font-size: 14px;
+                            font-family: $font-regular;
+                        }
+                    }
+                }
+                &.slick-active{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    // citas
+    #citas{
+        position: relative;
+        height: 300px;
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            .centerContainer{
+                display: flex;
+                height: 100%;
+                .center{
+                    margin: auto;
+                    width: 60%;
+                    .item{
+                        position: relative;
+                        color: #fff;
+                        font-size: 14px;
+                        font-family: $font-light;
+                        display: table;
+                        .dashicons{
+                            font-size: 60px;
+                            display: table-cell;
+                        }
+                        p.name{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // equipos
+    #equipo{
+        padding: $innerPadding;
+        text-align: center;
+        .container-fluid{
+            .team{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+                .item{
+                    // margin: 20px;
+                    width: calc(100% / 3.5);
+                    .image{
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        &:after{
+                            content: '';
+                            display: block;
+                            padding-top: 100%;
+                        }
+                    }
+                    h5{
+                        color: #979797;
+                        font-family: $font-light;
+                        font-size: 20px;
+                        margin: 15px;
+                    }
+                    p{
+
+                    }
+                }
+            }
+        }
+        .bgGrey{
+            padding: $innerPadding;
+            .team{
+                .item{
+                    width: calc(50% - 30px);
+                    display: flex;
+                    background: #fff;
+                    .image{
+                        width: 50%;
+                    }
+                    .body{
+                        width: 50%;
+                        padding: 15px;
+                        text-align: left;
+                        h5{
+                            margin: 0;
+                        }
+                        .date{
+                            margin: 0 0 10px 0;
+                            color: #C6B198;
+                            font-size: 13px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.admin-bar{
+        header{
+            top: 32px;
         }
     }
 }
