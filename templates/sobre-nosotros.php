@@ -1,17 +1,22 @@
+<?php 
+$page = get_page_by_path("sobre-nosotros");
+
+// var_dump($page);
+
+?>
+
 <section id="sobreNosotros">
 
     <div class="container-fluid">
 
-        <h2 class="without">Sobre Nosotros</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut magnam aspernatur optio quam labore totam libero provident explicabo, et ipsum, repellendus deleniti, voluptas molestias hic ullam impedit beatae accusamus.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptas earum quis ratione saepe officiis odio modi ex veniam eius minima, sed quam voluptate sunt eveniet maxime libero animi! Saepe.</p>
+        <h2 class="without"><?php echo $page->post_title ?></h2>
+        <?php echo $page->post_content ?>
 
     </div>
 
     <div class="bgGrey">
 
-        <div class="container-fluid">
+        <div class="container-fluid" data-aos="fade-right">
 
             <div class="item">
                 <div>

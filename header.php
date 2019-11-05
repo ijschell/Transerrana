@@ -12,29 +12,54 @@
 </head>
 <body data-ajax="<?php echo site_url() ?>" <?php echo body_class() ?>>
     <header>        
-        <div class="container-fluid">
-            <div>
+        <div class="descktop">
+            <div class="container-fluid">
                 <div>
-                    <h1><span>Transerrana</span></h1>
-                </div>
-                <div>
-                    <ul id="menu">
-                        <li>
-                            <a href="#">Sobre nosotros</a>
-                        </li>
-                        <li>
-                            <a href="#">Paseos</a>
-                        </li>
-                        <li>
-                            <a href="#">Galería</a>
-                        </li>
-                        <li>
-                            <a href="#">Contacto</a>
-                        </li>
-                    </ul>
-                    <a href="#" class="search">
-                        <span class="dashicons dashicons-search"></span>
-                    </a>
+                    <div>
+                        <h1><span>Transerrana</span></h1>
+                    </div>
+                    <div>
+
+                        <ul id="menu">
+                            <li>
+                                <a href="#">Sobre nosotros</a>
+                            </li>
+                            <li>
+                                <a href="#">Paseos</a>
+                            </li>
+                            <li>
+                                <a href="#">Galería</a>
+                            </li>
+                            <li>
+                                <a href="#">Contacto</a>
+                            </li>
+                        </ul>
+
+                        <!-- <a href="#" class="search">
+                            <span class="dashicons dashicons-search"></span>
+                        </a> -->
+
+                        <ul class="mobile">
+                            <li>
+                                <a href="#">Sobre nosotros</a>
+                            </li>
+                            <li>
+                                <a href="#">Paseos</a>
+                            </li>
+                            <li>
+                                <a href="#">Galería</a>
+                            </li>
+                            <li>
+                                <a href="#">Contacto</a>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="mobileMenu">
+                            <span class="dashicons dashicons-editor-alignright"></span>
+                            <span class="dashicons dashicons-no"></span>
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </div>

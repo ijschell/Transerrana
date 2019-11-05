@@ -109,6 +109,7 @@ body header .container-fluid > div > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 body header .container-fluid > div > div h1 {
@@ -132,6 +133,12 @@ body header .container-fluid > div > div #menu {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  body header .container-fluid > div > div #menu {
+    display: none;
+  }
+}
+
 body header .container-fluid > div > div #menu li {
   list-style: none;
   margin: 0 0 0 25px;
@@ -144,10 +151,109 @@ body header .container-fluid > div > div #menu li a {
   font-size: 0.8rem;
 }
 
+body header .container-fluid > div > div .mobileMenu {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: #fff;
+  text-decoration: none;
+  display: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  body header .container-fluid > div > div .mobileMenu {
+    display: block;
+  }
+}
+
+body header .container-fluid > div > div .mobileMenu .dashicons {
+  font-size: 30px;
+}
+
+body header .container-fluid > div > div .mobileMenu .dashicons.dashicons-editor-alignright {
+  display: block;
+}
+
+body header .container-fluid > div > div .mobileMenu .dashicons.dashicons-no {
+  display: none;
+  color: #fff;
+}
+
+body header .container-fluid > div > div .mobile {
+  display: none;
+  background: #444;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  height: 100%;
+  width: 250px;
+  z-index: 4;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+@media (max-width: 768px) {
+  body header .container-fluid > div > div .mobile {
+    display: block;
+  }
+}
+
+body header .container-fluid > div > div .mobile li {
+  list-style: none;
+  padding: 5px;
+  text-align: right;
+}
+
+body header .container-fluid > div > div .mobile li:first-child {
+  margin-top: 50px;
+}
+
+body header .container-fluid > div > div .mobile li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+}
+
 body header .container-fluid > div > div .search {
   color: #fff;
   margin-left: 35px;
   text-decoration: none;
+}
+
+body header.activeMobile .mobileMenu {
+  position: fixed !important;
+  top: 35px !important;
+  right: 29px !important;
+}
+
+body header.activeMobile .mobileMenu .dashicons-editor-alignright {
+  display: none !important;
+}
+
+body header.activeMobile .mobileMenu .dashicons-no {
+  display: block !important;
+}
+
+body header.activeMobile .mobile {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
+body.scrolling header {
+  position: fixed;
+  -webkit-animation-name: animateHeader;
+          animation-name: animateHeader;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 body #slider .item {
@@ -563,5 +669,27 @@ body footer .container-fluid .copyright p {
 
 body.admin-bar header {
   top: 32px;
+}
+
+@-webkit-keyframes animateHeader {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animateHeader {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

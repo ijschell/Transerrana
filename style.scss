@@ -103,6 +103,7 @@ body{
                 > div{
                     display: flex;
                     align-items: center;
+                    position: relative;
                     h1{
                         display: block;
                         background-image: url('./assets/images/logo_blanco.png');
@@ -118,6 +119,9 @@ body{
                     }
                     #menu{
                         display: flex;
+                        @media(max-width: 768px){
+                            display: none;
+                        }
                         li{
                             list-style: none;
                             margin: 0 0 0 25px;
@@ -129,6 +133,62 @@ body{
                             }
                         }
                     }
+                    .mobileMenu{
+                        position: absolute;
+                        top: 50%;
+                        right: 15px;
+                        color: #fff;
+                        text-decoration: none;
+                        display: none;
+                        transform: translateY(-50%);
+                        width: 30px;
+                        height: 30px;
+                        z-index: 5;
+                        @media(max-width: 768px){
+                            display: block;
+                        }
+                        .dashicons{
+                            font-size: 30px;
+                            &.dashicons-editor-alignright{
+                                display: block;
+                            }
+                            &.dashicons-no{
+                                display: none;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .mobile{
+                        display: none;
+                        background: #444;
+                        padding: 20px;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        margin: 0;
+                        height: 100%;
+                        width: 250px;
+                        z-index: 4;
+                        transition: all 0.5s ease;
+                        transform: translateX(100%);
+                        @media(max-width: 768px){
+                            display: block;
+                        }
+                        li{
+                            list-style: none;
+                            padding: 5px;
+                            text-align: right;
+                            &:first-child{
+                                margin-top: 50px;
+                            }
+                            a{
+                                text-decoration: none;
+                                color: #fff;
+                                // background: #444;
+                                padding: 5px;
+                            }
+                        }
+                    }
                     .search{
                         color: #fff;
                         margin-left: 35px;
@@ -136,6 +196,29 @@ body{
                     }
                 }
             }
+        }
+        &.activeMobile{
+            .mobileMenu{
+                position: fixed !important;
+                top: 35px !important;
+                right: 29px !important;
+                .dashicons-editor-alignright{
+                    display: none !important;
+                }
+                .dashicons-no{
+                    display: block !important;
+                }
+            }
+            .mobile{
+                transform: translateX(0%) !important;
+            }
+        }
+    }
+    &.scrolling{
+        header{
+            position: fixed;
+            animation-name: animateHeader;
+            animation-duration: 1s;
         }
     }
     // slider
@@ -484,5 +567,14 @@ body{
         header{
             top: 32px;
         }
+    }
+}
+
+@keyframes animateHeader{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
     }
 }

@@ -10,6 +10,7 @@ class SaveWorld{
             pauseOnFocus: false,
             autoplay: true,
             autoplaySpeed: 3000,
+            fade: true
         })
 
     }
@@ -55,25 +56,62 @@ class SaveWorld{
 
     }
 
+    activeMobileMenu(){
+
+        $('header').toggleClass('activeMobile');
+
+    }
+
+    scrollingBodyOn(){
+
+        $('body').addClass('scrolling');
+
+    }
+
+    scrollingBodyOff(){
+
+        $('body').removeClass('scrolling');
+
+    }
+
 }
+
+window.saveWorld = new SaveWorld();
 
 $(document).ready(function(){
 
-    var saveWorld = new SaveWorld();
-
     // init slider top
-    saveWorld.sliderTop();
+    window.saveWorld.sliderTop();
 
     // init slider gallery
-    saveWorld.gallerySlick();
+    window.saveWorld.gallerySlick();
 
     // init slider prices
-    saveWorld.sliderPrices();
+    window.saveWorld.sliderPrices();
 
     // init slider citas
-    saveWorld.sliderCitas();
+    window.saveWorld.sliderCitas();
 
     // init Aos
-    AOS.init();
+    AOS.init({
+        throttleDelay: 500,
+        duration: 1000
+    });
+
+})
+
+$(document).on('click', 'header .mobileMenu', function(){
+
+    window.saveWorld.activeMobileMenu();
+
+})
+
+$(window).scroll(function(){
+
+    if(window.scrollY > 70){
+        window.saveWorld.scrollingBodyOn();
+    }else{
+        window.saveWorld.scrollingBodyOff();
+    }
 
 })

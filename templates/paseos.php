@@ -7,7 +7,7 @@
 
     </div>
 
-    <div class="paseosPrecios">
+    <div class="paseosPrecios" data-aos="fade-up">
 
         <div class="item">
 
