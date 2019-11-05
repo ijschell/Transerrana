@@ -2,7 +2,7 @@
 
     <div class="container-fluid">
 
-        <h2>Sobre Nosotros</h2>
+        <h2 class="without">Sobre Nosotros</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut magnam aspernatur optio quam labore totam libero provident explicabo, et ipsum, repellendus deleniti, voluptas molestias hic ullam impedit beatae accusamus.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptas earum quis ratione saepe officiis odio modi ex veniam eius minima, sed quam voluptate sunt eveniet maxime libero animi! Saepe.</p>

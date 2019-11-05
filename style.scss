@@ -42,7 +42,7 @@ $font-regular: 'Axiforma-regular';
 $font-light: 'Axiforma-light';
 $font-book: 'Axiforma-book';
 $font-black: 'Axiforma-black';
-$innerPadding: 40px 0;
+$innerPadding: 60px 0;
 $bgGrey: #F6F6F6;
 
 .container-fluid{
@@ -57,6 +57,23 @@ h2{
     font-family: $font-light;
     font-size: 30px;
     text-transform: uppercase;
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translate(0, -50%);
+        width: 2px;
+        height: 25px;
+        background: #C6B198;
+    }
+    &.without{
+        &::after{
+            display: none;
+        }
+    }
 }
 body{
     font-family: $font-regular;
@@ -226,7 +243,7 @@ body{
         padding: $innerPadding;
         text-align: center;
         .paseosPrecios{
-            margin-top: 40px;
+            margin-top: 60px;
             .item{
                 margin: 0 20px;
                 background: #fff;
@@ -343,7 +360,7 @@ body{
     }
     // equipos
     #equipo{
-        padding: $innerPadding;
+        padding: $innerPadding 0 0;
         text-align: center;
         .container-fluid{
             .team{
@@ -377,6 +394,7 @@ body{
             }
         }
         .bgGrey{
+            margin-top: 40px;
             padding: $innerPadding;
             .team{
                 .item{
@@ -406,7 +424,62 @@ body{
             }
         }
     }
+    footer{
+        background: #444444;
+        color: #fff;
+        padding: $innerPadding;
+        text-align: center;
+        .container-fluid{
+            ul{
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                li{
+                    list-style: none;
+                    margin: 0 20px;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        display: block;
+                        font-size: 13px;
+                        transition: all 0.5s ease;
+                        &:hover{
+                            text-shadow: 0 0 3px #000;
+                        }
+                    }
+                }
+            }
+            .social{
+                display: flex;
+                justify-content: center;
+                padding: 20px 0;
+                a{
+                    background: #C6B198;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    margin: 0 10px;
+                    img{
+                        margin: auto;
+                        height: 20px;
+                    }
+                }
+            }
+            .copyright{
+                padding: 0 0 20px 0;
+                p{
+                    margin: 0;
+                    font-size: 13px;
+                }
+            }
+            .logo{
+                img{
 
+                }
+            }
+        }
+    }
     &.admin-bar{
         header{
             top: 32px;

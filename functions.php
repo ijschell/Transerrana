@@ -8,6 +8,9 @@ function all_styles() {
 	wp_register_style( 'slick', get_template_directory_uri() . '/assets/libs/slick/slick.css', false, false );
 	wp_enqueue_style( 'slick' );
 
+	wp_register_style( 'dashicons', get_template_directory_uri() . '/assets/libs/dashicons/dashicons.min.css', false, false );
+	wp_enqueue_style( 'dashicons' );
+
 	wp_register_style( 'fancybox', get_template_directory_uri() . '/assets/libs/fancybox/jquery.fancybox.min.css', false, false );
 	wp_enqueue_style( 'fancybox' );
 
