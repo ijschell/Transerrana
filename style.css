@@ -458,8 +458,8 @@ body #paseosEspeciales .paseosPrecios .item .body .header .column p {
 
 body #paseosEspeciales .paseosPrecios .item .body .description {
   padding: 20px 0 0 0;
-  height: 110px;
   overflow: hidden;
+  min-height: 150px;
 }
 
 body #paseosEspeciales .paseosPrecios .item .body .description h5 {

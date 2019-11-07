@@ -1,7 +1,11 @@
 <?php 
 $page = get_page_by_path("sobre-nosotros");
 
-// var_dump($page);
+$posts = get_posts(array(
+    "post_type"     =>      "sobre_nosotros_box",
+    "post_status"   =>      "publish",
+    "numberposts"   =>      -1
+));
 
 ?>
 
@@ -18,29 +22,21 @@ $page = get_page_by_path("sobre-nosotros");
 
         <div class="container-fluid" data-aos="fade-right">
 
-            <div class="item">
-                <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mountains-icon.png" ?>" alt="Montañas">
-                </div>
-                <h4>Recorridos</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga accusantium, quam veniam placeat et quaerat praesentium cum voluptatum itaque quod iste accusamus architecto. Eligendi soluta corrupti cum suscipit alias?</p>
-            </div>
-            
-            <div class="item">
-                <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/map-icon.png" ?>" alt="Mapa">
-                </div>
-                <h4>Guías</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga accusantium, quam veniam placeat et quaerat praesentium cum voluptatum itaque quod iste accusamus architecto. Eligendi soluta corrupti cum suscipit alias?</p>
-            </div>
+            <?php 
+            foreach ($posts as $key => $value) {
+                
+                ?>
+                <div class="item">
+                    <div>
+                        <img src="<?php echo get_the_post_thumbnail_url( $value->ID ) ?>" alt="<?php echo $value->post_title ?>">
+                    </div>
+                    <h4><?php echo $value->post_title ?></h4>
+                    <?php echo $value->post_content ?>
+                </div>    
+                <?php
 
-            <div class="item">
-                <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bike-icon.png" ?>" alt="Bicicleta">
-                </div>
-                <h4>Alquiler de bicis</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga accusantium, quam veniam placeat et quaerat praesentium cum voluptatum itaque quod iste accusamus architecto. Eligendi soluta corrupti cum suscipit alias?</p>
-            </div>
+            }
+            ?>
 
         </div>
 

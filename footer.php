@@ -1,3 +1,11 @@
+<?php 
+    $posts = get_posts(array(
+        "post_type"     =>      "redes_sociales",
+        "post_status"   =>      "publish",
+        "numberposts"   =>      -1
+    ));
+?>
+
     <footer>
         <div class="container-fluid">
 
@@ -17,12 +25,15 @@
             </ul>
 
             <div class="social">
-                <a href="#" target="_blank">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/002-instagram.png'?>" alt="Instagram">
-                </a>
-                <a href="#" target="_blank">
-                <img src="<?php echo get_template_directory_uri() . '/assets/images/001-logo-de-facebook.png'?>" alt="Facebook">
-                </a>
+                <?php 
+                foreach ($posts as $key => $value) {
+                    ?>
+                    <a href="<?php echo get_post_meta($value->ID, "url")[0] ?>" target="_blank" title="Visita nuestro <?php echo $value->post_title ?>">
+                        <img src="<?php echo get_the_post_thumbnail_url( $value->ID, "medium" ) ?>" alt="<?php echo $value->post_title ?>">
+                    </a>
+                    <?php
+                }
+                ?>
             </div>
 
             <div class="copyright">

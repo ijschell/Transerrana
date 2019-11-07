@@ -1,5 +1,6 @@
 <?php 
 add_theme_support( 'post-thumbnails' );
+include('meta_box.php');
 // Register Style
 function all_styles() {
 
