@@ -48,6 +48,12 @@
     </footer>
 
     <?php 
+
+    // echo get_template_directory() . "/templates/box_proximas_travesias.php";
+
+    // get modal travesias
+    // include_once(get_template_directory() . "/templates/box_proximas_travesias.php");
+
     wp_footer();
     ?>
 

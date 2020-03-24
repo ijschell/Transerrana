@@ -56,6 +56,26 @@ class SaveWorld{
 
     }
 
+    sliderSponsors(){
+
+        var carousel = $('.box_trans .sponsors .slider_sponsors');
+
+        if(carousel.hasClass('slick-initialized')){
+            carousel.slick('unslick');
+        }
+
+        carousel.slick({
+            arrows : false,
+            pauseOnFocus: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            fade: false
+        })
+
+    }
+
     activeMobileMenu(){
 
         $('header').toggleClass('activeMobile');
@@ -71,6 +91,27 @@ class SaveWorld{
     scrollingBodyOff(){
 
         $('body').removeClass('scrolling');
+
+    }
+
+    scrollSmooth(){
+
+        $('a[href*="#"]').smoothscroll({
+            duration:  400,
+            easing: 'swing'
+        });
+
+    }
+
+    proximas_travesias_buttons(){
+
+        $(document).on('click', '#container_box_proximas_travesias .buttons_modal a', function(e){
+
+            e.preventDefault();
+
+            
+
+        })
 
     }
 
@@ -91,6 +132,12 @@ $(document).ready(function(){
 
     // init slider citas
     window.saveWorld.sliderCitas();
+
+    // scrollSmooth
+    window.saveWorld.scrollSmooth();
+
+    // slider sponsors
+    // window.saveWorld.sliderSponsors();
 
     // init Aos
     AOS.init({
@@ -113,5 +160,13 @@ $(window).scroll(function(){
     }else{
         window.saveWorld.scrollingBodyOff();
     }
+
+})
+
+$(document).on('click', '#paseosEspeciales .paseosPrecios .item .body a', function(){
+
+    setTimeout(function(){
+        window.saveWorld.sliderSponsors();
+    }, 500);
 
 })

@@ -385,7 +385,6 @@ body #paseosEspeciales .paseosPrecios {
 
 body #paseosEspeciales .paseosPrecios .item {
   margin: 0 20px;
-  background: #fff;
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
   opacity: 0.1;
@@ -404,8 +403,6 @@ body #paseosEspeciales .paseosPrecios .item .image .price {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #C6B198;
-  padding: 5px 15px;
 }
 
 body #paseosEspeciales .paseosPrecios .item .image .price p {
@@ -414,8 +411,44 @@ body #paseosEspeciales .paseosPrecios .item .image .price p {
   font-size: 13px;
 }
 
+body #paseosEspeciales .paseosPrecios .item .image .price h3 {
+  color: #fff;
+  margin: 0;
+  text-shadow: 1px 1px 1px #000;
+}
+
+body #paseosEspeciales .paseosPrecios .item .image .date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+body #paseosEspeciales .paseosPrecios .item .image .date p {
+  color: #fff;
+  margin: 0;
+  padding: 5px;
+  font-size: 15px;
+}
+
+body #paseosEspeciales .paseosPrecios .item .image .date p:first-child {
+  font-size: 11px;
+}
+
 body #paseosEspeciales .paseosPrecios .item .body {
   padding: 0 15px 15px 15px;
+}
+
+body #paseosEspeciales .paseosPrecios .item .body a {
+  background: #C6B198;
+  color: #444;
+  padding: 10px 15px;
+  border-radius: 2px;
+  text-decoration: none;
+  margin: 10px auto 0 auto;
+  display: table;
+  font-size: 13px;
 }
 
 body #paseosEspeciales .paseosPrecios .item .body .title {
@@ -691,5 +724,45 @@ body.admin-bar header {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+}
+
+.box_trans {
+  width: 100%;
+  max-width: 760px;
+}
+
+.box_trans .title h4 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+.box_trans .date {
+  margin-bottom: 10px;
+}
+
+.box_trans .date p {
+  text-align: center;
+}
+
+.box_trans .foto {
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box_trans .video iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.box_trans .sponsors .slider_sponsors .slick-slide {
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 5px;
 }
 /*# sourceMappingURL=style.css.map */

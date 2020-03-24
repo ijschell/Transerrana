@@ -329,7 +329,7 @@ body{
             margin-top: 60px;
             .item{
                 margin: 0 20px;
-                background: #fff;
+                // background: #fff;
                 transition: opacity 1s ease;
                 opacity: 0.1;
                 .image{
@@ -343,17 +343,48 @@ body{
                         position: absolute;
                         top: 15px;
                         left: 15px;
-                        background: #C6B198;
-                        padding: 5px 15px;
+                        // background: #C6B198;
+                        // padding: 5px 15px;
                         p{
                             color: #fff;
                             margin: 0;
                             font-size: 13px;
                         }
+                        h3{
+                            color: #fff;
+                            margin: 0;
+                            text-shadow: 1px 1px 1px #000;
+                        }
+                    }
+                    .date{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: rgba(0,0,0,0.8);
+                        width: 100%;
+                        p{
+                            color: #fff;
+                            margin: 0;
+                            padding: 5px;
+                            font-size: 15px;
+                            &:first-child{
+                                font-size: 11px;
+                            }
+                        }
                     }
                 }
                 .body{
                     padding: 0 15px 15px 15px;
+                    a{
+                        background: #C6B198;
+                        color: #444;
+                        padding: 10px 15px;
+                        border-radius: 2px;
+                        text-decoration: none;
+                        margin: 10px auto 0 auto;
+                        display: table;
+                        font-size: 13px;
+                    }
                     .title{
                         border-bottom: solid 1px #ccc;
                         padding: 20px 0;
@@ -576,5 +607,47 @@ body{
     }
     to{
         transform: translateY(0%);
+    }
+}
+
+.box_trans{
+    width: 100%;
+    max-width: 760px;
+    .title{
+        h4{
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    .date{
+        margin-bottom: 10px;
+        p{
+            text-align: center;
+        }
+    }
+    .foto{
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .video{
+        iframe{
+            width: 100%;
+            height: 400px;
+        }
+    }
+    .sponsors{
+        .slider_sponsors{
+            .slick-slide{
+                height: 50px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0 5px;
+            }
+        }
     }
 }

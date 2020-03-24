@@ -16,19 +16,19 @@
             <div class="container-fluid">
                 <div>
                     <div>
-                        <h1><span>Transerrana</span></h1>
+                        <h1><a href="<?php echo site_url(); ?>"><span>Transerrana</span></a></h1>
                     </div>
                     <div>
 
                         <ul id="menu">
                             <li>
-                                <a href="#">Sobre nosotros</a>
+                                <a href="#sobreNosotros">Sobre nosotros</a>
                             </li>
                             <li>
-                                <a href="#">Paseos</a>
+                                <a href="#paseosEspeciales">Próximas travesías</a>
                             </li>
                             <li>
-                                <a href="#">Galería</a>
+                                <a href="#gallery">Galería</a>
                             </li>
                             <li>
                                 <a href="#">Contacto</a>
@@ -41,13 +41,16 @@
 
                         <ul class="mobile">
                             <li>
-                                <a href="#">Sobre nosotros</a>
+                                <a href="#sobreNosotros">Sobre nosotros</a>
                             </li>
                             <li>
-                                <a href="#">Paseos</a>
+                                <a href="#paseosEspeciales">Paseos</a>
                             </li>
                             <li>
-                                <a href="#">Galería</a>
+                                <a href="#gallery">Galería</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" data-fancybox="container_box_proximas_travesias_mobile" data-src="#container_box_proximas_travesias_mobile">Próximas travesías</a>
                             </li>
                             <li>
                                 <a href="#">Contacto</a>
