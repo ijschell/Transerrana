@@ -1,11 +1,11 @@
 <?php 
 $page = get_page_by_path("equipo");
 
-$posts = get_posts(array(
-    "post_type"     =>      "equipo",
-    "post_status"   =>      "publish",
-    "numberposts"   =>      -1
-));
+// $posts = get_posts(array(
+//     "post_type"     =>      "equipo",
+//     "post_status"   =>      "publish",
+//     "numberposts"   =>      -1
+// ));
 
 ?>
 
@@ -17,9 +17,10 @@ $posts = get_posts(array(
             <h2><?php echo $page->post_title ?></h2>
             <?php echo $page->post_content ?>
 
-            <div class="team" data-aos="fade-up">
+            <div class="team" data-aos="fade-up" style="background-image: url(<?php echo get_the_post_thumbnail_url( $page, "full" ) ?>)">
                 
                 <?php 
+                /*
                 foreach ($posts as $key => $value) {
                     if($key <= 2){
                         ?>
@@ -30,7 +31,7 @@ $posts = get_posts(array(
                         </div>
                         <?php
                     }
-                }
+                }*/
                 ?>
 
             </div>
@@ -38,12 +39,13 @@ $posts = get_posts(array(
         </div>
     </div>
 
+    <!--       
     <div class="bgGrey">
 
         <div class="container-fluid">
 
-            <!-- <h2>Equipo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+            <h2>Equipo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
             <div class="team" data-aos="fade-up">
 
@@ -69,5 +71,6 @@ $posts = get_posts(array(
         </div>
 
     </div>
+    -->
 
 </section>

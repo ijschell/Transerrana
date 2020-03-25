@@ -19,6 +19,12 @@ function all_styles() {
 	wp_register_style( 'aos', get_template_directory_uri() . '/assets/libs/aos/aos.css', false, false );
 	wp_enqueue_style( 'aos' );
 
+	wp_register_style( 'html5tooltips', get_template_directory_uri() . '/assets/libs/tooltip/html5tooltips.css', false, false );
+	wp_enqueue_style( 'html5tooltips' );
+
+	wp_register_style( 'html5tooltips_animation', get_template_directory_uri() . '/assets/libs/tooltip/html5tooltips.animation.css', false, false );
+	wp_enqueue_style( 'html5tooltips_animation' );
+
 	wp_register_style( 'style', get_template_directory_uri() . '/style.css', false, false );
 	wp_enqueue_style( 'style' );
 
@@ -45,6 +51,9 @@ function all_scripts() {
 
 	wp_register_script( 'smoothscroll', get_template_directory_uri() . '/assets/libs/smoothscroll/jquery.smoothscroll.min.js', array('jquery_3'), false, true );
 	wp_enqueue_script( 'smoothscroll' );
+
+	wp_register_script( 'html5tooltips', get_template_directory_uri() . '/assets/libs/tooltip/html5tooltips.js', array('jquery_3'), false, true );
+	wp_enqueue_script( 'html5tooltips' );
 
 	wp_register_script( 'scripts', get_template_directory_uri() . '/assets/js/script.js', array('jquery_3'), false, true );
 	wp_enqueue_script( 'scripts' );

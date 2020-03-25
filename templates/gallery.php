@@ -1,19 +1,20 @@
 <?php 
-$gallery = get_posts(array(
-    "name"      =>      "galeria-de-imagenes"
+$galleries = get_posts(array(
+    "post_type"     =>  "galerias_de_imagenes",
+    "numberposts"   =>  -1
 ));
-
-$gallery = get_post_meta( $gallery[0]->ID, "vdw_gallery_id" );
 
 $images = array();
 
-foreach ($gallery[0] as $key => $value) {
+foreach ($galleries as $key => $value) {
+    
     array_push($images, array(
-        "thumbnail"     =>      wp_get_attachment_image_src($value, "thumbnail"),
-        "full"          =>      wp_get_attachment_image_src($value, "full"),
+        "thumbnail"     =>      get_the_post_thumbnail_url( $value->ID, "thumbnail" ),
+        "title"     =>      $value->post_title,
+        "url"       =>      get_the_permalink($value->ID)
     ));
-}
 
+}
 ?>
 
 <section id="gallery">
@@ -23,8 +24,8 @@ foreach ($gallery[0] as $key => $value) {
         <?php 
         foreach ($images as $key => $value) {
             ?>
-            <div class="item" style="background-image: url(<?php echo $value["thumbnail"][0] ?>)">
-                <a data-fancybox="gallery" href="<?php echo $value["full"][0] ?>"></a>
+            <div data-tooltip-stickto="top" data-tooltip-animate-function="foldin" data-tooltip="<?php echo $value["title"] ?>" class="item" style="background-image: url(<?php echo $value["thumbnail"] ?>)">
+                <a href="<?php echo $value["url"] ?>"></a>
             </div>
             <?php
         }

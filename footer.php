@@ -28,7 +28,7 @@
                 <?php 
                 foreach ($posts as $key => $value) {
                     ?>
-                    <a href="<?php echo get_post_meta($value->ID, "url")[0] ?>" target="_blank" title="Visita nuestro <?php echo $value->post_title ?>">
+                    <a href="<?php echo get_post_meta($value->ID, "url")[0] ?>" target="_blank" data-tooltip-stickto="top" data-tooltip-animate-function="foldin" data-tooltip="Visita nuestro <?php echo $value->post_title ?>">
                         <img src="<?php echo get_the_post_thumbnail_url( $value->ID, "medium" ) ?>" alt="<?php echo $value->post_title ?>">
                     </a>
                     <?php
@@ -36,8 +36,37 @@
                 ?>
             </div>
 
+            <?php
+            $contact = get_posts(array(
+                "post_type"     =>      "datos_de_contacto",
+                "numberposts"   =>      -1
+            ));
+            ?>
+
             <div class="copyright">
-                <p>&copy; Todos los derechos reservados.</p>
+                <p>&copy; Todos los derechos reservados.</p>                
+                <?php 
+                if(count($contact) > 0){
+
+                    foreach ($contact as $key => $value) {
+
+                        $prefix = "tel:";
+
+                        if($value->post_title == "Email"){
+                            $prefix = "mailto:";
+                        }
+
+                        ?>
+                        <p>
+                            <a href="<?php echo $prefix . get_post_meta($value->ID, "info")[0]; ?>">
+                                <?php echo get_post_meta($value->ID, "info")[0]; ?>
+                            </a>
+                        </p>
+                        <?php
+                    }
+
+                }
+                ?>
             </div>
 
             <div class="logo">

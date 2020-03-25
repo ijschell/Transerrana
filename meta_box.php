@@ -102,6 +102,19 @@ function prefix_register_meta_boxes(){
     );
 
     $meta_boxes[] = array(
+        "title"         =>      "Información",
+        "post_types"    =>      "datos_de_contacto",
+        "fields"        =>      array(
+            array(
+                "name"      =>      "Información",
+                "desc"      =>      "Ingrese aquí el número, email, fax o el dato que sea necesario.",
+                "id"        =>      "info",
+                "type"      =>      "text"
+            )
+        )
+    );
+
+    $meta_boxes[] = array(
         "title"         =>      "Información adicional",
         "post_types"    =>      "redes_sociales",
         "fields"        =>      array(
@@ -110,6 +123,20 @@ function prefix_register_meta_boxes(){
                 "desc"      =>      "",
                 "id"        =>      "url",
                 "type"      =>      "text"
+            )
+        )
+    );
+
+    $meta_boxes[] = array(
+        "title"         =>      "Galería de imágenes",
+        "post_types"    =>      "galerias_de_imagenes",
+        "fields"        =>      array(
+            array(
+                "name"      =>      "Imágenes",
+                "desc"      =>      "Suba aquí todas las imágenes de esta travesía. (Max. 9)",
+                "id"        =>      "gallery",
+                "type"      =>      "image_advanced",
+                'max_file_uploads' => 9,
             )
         )
     );
