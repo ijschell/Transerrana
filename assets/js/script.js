@@ -24,6 +24,20 @@ class SaveWorld{
             autoplaySpeed: 3000,
             slidesToShow: 8,
             slidesToScroll: 1,
+            responsive : [
+                {
+                    breakpoint : 800,
+                    settings : {
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint : 550,
+                    settings : {
+                        slidesToShow: 2
+                    }
+                }
+            ]
         })
 
     }
@@ -37,7 +51,23 @@ class SaveWorld{
             autoplaySpeed: 5000,
             slidesToShow: 2.5,
             slidesToScroll: 1,
-            centerMode: true
+            centerMode: true,
+            responsive : [
+                {
+                    breakpoint : 800,
+                    settings : {
+                        slidesToShow: 2,
+                        centerMode: false
+                    }
+                },
+                {
+                    breakpoint : 550,
+                    settings : {
+                        slidesToShow: 1,
+                        centerMode: false
+                    }
+                },
+            ]
         })
 
     }
@@ -71,7 +101,15 @@ class SaveWorld{
             autoplaySpeed: 5000,
             slidesToShow: 5,
             slidesToScroll: 1,
-            fade: false
+            fade: false,
+            responsive : [
+                {
+                    breakpoint : 550,
+                    settings : {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
         })
 
     }
@@ -115,6 +153,35 @@ class SaveWorld{
 
     }
 
+    contact_select(){
+
+        // get possibles options
+        var options = [];
+
+        $('#options_to_contact > div').each(function(k, v){
+
+            options.push($(v).data('title'));
+
+        });
+
+        if(options.length > 0){
+
+            // repace contact select for options
+            $('#menu_paseos').html('');
+
+            $('#menu_paseos').append('<option value="-- Seleccionar paseo --">-- Seleccionar paseo --</option>');
+
+            for (var index = 0; index < options.length; index++) {
+                var element = options[index];
+                
+                $('#menu_paseos').append('<option value="'+element+'">'+element+'</option>');
+
+            }
+
+        }
+
+    }
+
 }
 
 window.saveWorld = new SaveWorld();
@@ -136,8 +203,8 @@ $(document).ready(function(){
     // scrollSmooth
     window.saveWorld.scrollSmooth();
 
-    // slider sponsors
-    // window.saveWorld.sliderSponsors();
+    // select contact
+    window.saveWorld.contact_select();
 
     // init Aos
     AOS.init({

@@ -55,6 +55,9 @@ function all_scripts() {
 	wp_register_script( 'html5tooltips', get_template_directory_uri() . '/assets/libs/tooltip/html5tooltips.js', array('jquery_3'), false, true );
 	wp_enqueue_script( 'html5tooltips' );
 
+	wp_register_script( 'js_cookie', get_template_directory_uri() . '/assets/libs/js_cookie/js.cookie.min.js', array('jquery_3'), false, true );
+	wp_enqueue_script( 'js_cookie' );
+
 	wp_register_script( 'scripts', get_template_directory_uri() . '/assets/js/script.js', array('jquery_3'), false, true );
 	wp_enqueue_script( 'scripts' );
 

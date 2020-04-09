@@ -18,6 +18,18 @@ $posts = get_posts(array(
 
     </div>
 
+    <div id="options_to_contact" style="display: none">
+
+        <?php 
+        foreach ($posts as $key => $value) {
+            ?>
+            <div data-title="<?php echo $value->post_title ?>"></div>
+            <?php
+        }
+        ?>
+
+    </div>
+
     <div class="paseosPrecios" data-aos="fade-up">
 
         <?php 

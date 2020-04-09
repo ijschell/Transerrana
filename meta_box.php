@@ -115,6 +115,19 @@ function prefix_register_meta_boxes(){
     );
 
     $meta_boxes[] = array(
+        "title"         =>      "Información",
+        "post_types"    =>      "video_popup",
+        "fields"        =>      array(
+            array(
+                "name"      =>      "Url video",
+                "desc"      =>      "Si existe una url de video de youtube en este campo el video se verá automáticamente en la web.",
+                "id"        =>      "video",
+                "type"      =>      "text"
+            )
+        )
+    );
+
+    $meta_boxes[] = array(
         "title"         =>      "Información adicional",
         "post_types"    =>      "redes_sociales",
         "fields"        =>      array(

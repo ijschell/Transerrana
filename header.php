@@ -50,17 +50,17 @@
                                 <a href="#gallery">Galería</a>
                             </li>
                             <li>
-                                <a href="javascript:;" data-fancybox="container_box_proximas_travesias_mobile" data-src="#container_box_proximas_travesias_mobile">Próximas travesías</a>
+                                <a href="#paseosEspeciales">Próximas travesías</a>
                             </li>
                             <li>
                                 <a href="#">Contacto</a>
                             </li>
                         </ul>
 
-                        <a href="#" class="mobileMenu">
+                        <span class="mobileMenu">
                             <span class="dashicons dashicons-editor-alignright"></span>
                             <span class="dashicons dashicons-no"></span>
-                        </a>
+                        </span>
 
                     </div>
                 </div>
