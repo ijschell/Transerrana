@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo bloginfo("title") ?></title>
     <meta name="description" content="<?php echo bloginfo("description")?>">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/favicon.ico" type="image/x-icon" />
     <?php 
     wp_head();
     ?>
@@ -25,13 +26,13 @@
                                 <a href="#sobreNosotros">Sobre nosotros</a>
                             </li>
                             <li>
-                                <a href="#paseosEspeciales">Próximas travesías</a>
+                                <a href="#paseosEspeciales">Travesías</a>
                             </li>
                             <li>
                                 <a href="#gallery">Galería</a>
                             </li>
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="#contact">Contacto</a>
                             </li>
                         </ul>
 
@@ -50,10 +51,10 @@
                                 <a href="#gallery">Galería</a>
                             </li>
                             <li>
-                                <a href="#paseosEspeciales">Próximas travesías</a>
+                                <a href="#paseosEspeciales">Travesías</a>
                             </li>
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="#contact">Contacto</a>
                             </li>
                         </ul>
 

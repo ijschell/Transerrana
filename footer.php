@@ -27,11 +27,13 @@
             <div class="social">
                 <?php 
                 foreach ($posts as $key => $value) {
-                    ?>
-                    <a href="<?php echo get_post_meta($value->ID, "url")[0] ?>" target="_blank" data-tooltip-stickto="top" data-tooltip-animate-function="foldin" data-tooltip="Visita nuestro <?php echo $value->post_title ?>">
-                        <img src="<?php echo get_the_post_thumbnail_url( $value->ID, "medium" ) ?>" alt="<?php echo $value->post_title ?>">
-                    </a>
-                    <?php
+                    if($value->post_title != "Whatsapp"){
+                        ?>
+                        <a href="<?php echo get_post_meta($value->ID, "url")[0] ?>" target="_blank" data-tooltip-stickto="top" data-tooltip-animate-function="foldin" data-tooltip="Visita nuestro <?php echo $value->post_title ?>">
+                            <img src="<?php echo get_the_post_thumbnail_url( $value->ID, "medium" ) ?>" alt="<?php echo $value->post_title ?>">
+                        </a>
+                        <?php
+                    }
                 }
                 ?>
             </div>
@@ -86,7 +88,11 @@
     );
     $whatsapp = get_posts($whatsapp);
     ?>
-    <a id="float_whatsapp" target="_blank" data-tooltip-stickto="right" data-tooltip-animate-function="foldin" data-tooltip="¡Envianos un Whatsapp ahora!" href="<?php echo get_post_meta($whatsapp[0]->ID, "url")[0]; ?>">
+    <a id="float_whatsapp" target="_blank" data-tooltip-stickto="left" data-tooltip-animate-function="foldin" data-tooltip="¡Envianos un Whatsapp ahora!" href="https://api.whatsapp.com/send?phone=<?php echo get_post_meta($whatsapp[0]->ID, "url")[0]; ?>">
+        <img src="<?php echo get_the_post_thumbnail_url( $whatsapp[0]->ID, "medium" ) ?>" alt="<?php echo $whatsapp[0]->post_title ?>">
+    </a>
+
+    <a id="float_whatsapp_mobile" target="_blank" data-tooltip-stickto="right" data-tooltip-animate-function="foldin" data-tooltip="¡Envianos un Whatsapp ahora!" href="https://api.whatsapp.com/send?phone=<?php echo get_post_meta($whatsapp[0]->ID, "url")[0]; ?>">
         <img src="<?php echo get_the_post_thumbnail_url( $whatsapp[0]->ID, "medium" ) ?>" alt="<?php echo $whatsapp[0]->post_title ?>">
     </a>
 
