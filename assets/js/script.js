@@ -49,9 +49,9 @@ class SaveWorld{
             pauseOnFocus: false,
             autoplay: true,
             autoplaySpeed: 5000,
-            slidesToShow: 2.5,
+            slidesToShow: 2,
             slidesToScroll: 1,
-            centerMode: true,
+            centerMode: false,
             responsive : [
                 {
                     breakpoint : 800,

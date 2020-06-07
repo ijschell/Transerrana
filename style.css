@@ -380,6 +380,8 @@ body #sobreNosotros .bgGrey .container-fluid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 550px) {
@@ -390,6 +392,7 @@ body #sobreNosotros .bgGrey .container-fluid {
 
 body #sobreNosotros .bgGrey .container-fluid .item {
   padding: 0 20px;
+  width: 33%;
 }
 
 @media (max-width: 550px) {
@@ -892,7 +895,7 @@ body.admin-bar header {
 
 .box_trans .sponsors .slider_sponsors .slick-slide {
   height: 50px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 5px;

@@ -49,7 +49,7 @@ $posts = get_posts(array(
                         <?php 
                         $date = new DateTime(get_post_meta($value->ID, "fecha_hora")[0]);
                         ?>
-                        <p><?php echo $date->format("d-m-Y H:i") ?></p>
+                        <p><?php echo $date->format("d-m-Y") ?></p>
                     </div>
 
                 </div>
@@ -85,7 +85,7 @@ foreach ($posts as $key => $value) {
             <?php 
             $date = new DateTime(get_post_meta($value->ID, "fecha_hora")[0]);
             ?>
-            <p><?php echo $date->format("d/m/Y - G:i") . "hs"?></p>
+            <p><?php echo $date->format("d/m/Y")?></p>
             <!-- <p><?php echo $date->format("j") . " de " . $date->format("F") . " del " . $date->format("Y") ?></p> -->
         </div>
 

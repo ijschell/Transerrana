@@ -146,10 +146,10 @@ function prefix_register_meta_boxes(){
         "fields"        =>      array(
             array(
                 "name"      =>      "Imágenes",
-                "desc"      =>      "Suba aquí todas las imágenes de esta travesía. (Max. 9)",
+                "desc"      =>      "Suba aquí todas las imágenes de esta travesía. (Max. 30)",
                 "id"        =>      "gallery",
                 "type"      =>      "image_advanced",
-                'max_file_uploads' => 9,
+                'max_file_uploads' => 30,
             )
         )
     );
